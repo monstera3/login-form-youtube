@@ -1,12 +1,11 @@
 body {
-  /* background-color: #9eb9cf; */
+   /*background-color: #9eb9cf;*/
   background-color: #f8f9d2;
   background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
 }
 
 .formContainer {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -26,7 +25,6 @@ h1 {
   border-radius: 10px;
   background-color: #fbf5f5;
   box-shadow: 2px 12px 17px -7px #383838;
-  border-radius: 15px;
 }
 
 .uiForm {
@@ -49,32 +47,32 @@ h1 {
   border-radius: 4px;
 }
 
-/*.formField input:focus {*/
-/*  outline: none;*/
-/*}*/
+.formField input:focus {
+  outline: none;
+}
 
-/*.formField label {*/
-/*  font-size: 15px;*/
-/*  font-weight: 600;*/
-/*  margin-bottom: 3px;*/
-/*}*/
+.formField label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
 
-/*button {*/
-/*  background: #0563b4;*/
-/*  width: 100%;*/
-/*  margin-top: 10px;*/
-/*  border: none;*/
-/*  border-radius: 5px;*/
-/*  color: white;*/
-/*  padding: 10px 30px;*/
-/*  font-size: 15px;*/
-/*  cursor: pointer;*/
-/*  transition: all 0.3s;*/
-/*}*/
+button {
+  background: #0563b4;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
-/*button:hover {*/
-/*  background-color: #0e528d;*/
-/*}*/
+button:hover {
+  background-color: #0e528d;
+}
 
 /*.errorMsg {*/
 /*  color: red;*/

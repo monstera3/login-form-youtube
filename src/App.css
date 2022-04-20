@@ -74,13 +74,13 @@ button:hover {
   background-color: #0e528d;
 }
 
-/*.errorMsg {*/
-/*  color: red;*/
-/*  margin: 0;*/
-/*  align-self: flex-start;*/
-/*}*/
+.errorMsg {
+  color: red;
+  margin: 0;
+  align-self: flex-start;
+}
 
-/*.msgOk {*/
-/*  color: green;*/
-/*  margin-top: 15px;*/
-/*}*/
+.msgOk {
+  color: green;
+  margin-top: 15px;
+}

@@ -4,6 +4,7 @@ import {useState} from "react";
 function App() {
   const initialValues  = {username:"",mailAddress:"",password:""};
   const [formValues,setFromValues] = useState(initialValues);
+  const [formErrors,setFormErrors] = useState({});
 
   const handleChange = (e) => {
     //e.target とは、ユーザー名のインプット属性にアクセスしているのかメールアドレスなのか識別するために要素を取得している
@@ -14,10 +15,37 @@ function App() {
     console.log(formValues);
   }
 
+  const handleSubmit = (e) => {
+    //eを受け取る理由： e.preventDefault()を呼ぶため
+    // useStateでもった値を送信ボタン押したら勝手に画面がリロードしないように妨げる（APIをたたく時の値としてなど）
+    e.preventDefault();
+  //  ログイン情報を送信する。
+  //  バリテーションチェック(エラー用の空のオブジェクトを用意する)
+    setFormErrors(validate(formValues));
+  };
+
+  const validate = (values) => {
+    //
+    const errors = {};
+    //usernameの値が存在しなかったら
+    if(!values.username){
+      errors.username = 'ユーザー名を入力してください';
+    }
+    if(!values.mailAddress){
+      errors.username = 'ユーザー名を入力してください';
+    }
+    if(!values.password){
+      errors.username = 'ユーザー名を入力してください';
+    }else if(values.password.length> 4 ){
+      errors.username = '4文字以上15文字以下のパスワードを入力してください';
+    } else if(values.password.length> 15 ){
+      errors.username = '4文字以上15文字以下のパスワードを入力してください';
+    }
+  }
 
   return (
     <div className="formContainer">
-      <form>
+      <form onSubmit={(e)=> handleSubmit(e)}>
         <h1>ログインフォーム</h1>
         <hr/>
         <div className="uiForm">
